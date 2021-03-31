@@ -1,12 +1,13 @@
 from Settings.Config import Config
 from PageObject.MainPage import MainPage
-from Tests.init_test import init_test
+import pytest
 
 
 class Test_Chapter5:
 
+    @pytest.mark.usefixtures('init_driver')
     def test_intent_with_results_text_is_displayed(self):
-        main_page = MainPage(init_test.setup_driver(self))
+        main_page = MainPage(self.driver)
         main_page.tap_chapter5(main_page.chapter5_field)
         main_page.tap_intent_with_results(main_page.intent_with_results_field)
         main_page.tap_launch_activity_for_result(main_page.launch_activity_for_result_field)
@@ -15,10 +16,10 @@ class Test_Chapter5:
         actual_text = main_page.get_element_text(main_page.result_field)
 
         assert actual_text == Config.INPUT_TEXT
-        init_test.tear_down(self)
 
+    @pytest.mark.usefixtures('init_driver')
     def test_implicit_intents_url_is_displayed(self):
-        main_page = MainPage(init_test.setup_driver(self))
+        main_page = MainPage(self.driver)
         main_page.tap_chapter5(main_page.chapter5_field)
         main_page.tap_implicit_intents(main_page.implicit_intent_field)
         main_page.send_keys(main_page.input_url_field, Config.INPUT_URL)
@@ -26,4 +27,3 @@ class Test_Chapter5:
         actual_title = main_page.get_element_text(main_page.salesforce_image)
 
         assert actual_title == Config.EXPECTED_TEXT
-        init_test.tear_down(self)

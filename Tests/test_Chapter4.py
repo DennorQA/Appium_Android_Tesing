@@ -1,12 +1,13 @@
 from Settings.Config import Config
 from PageObject.MainPage import MainPage
-from Tests.init_test import init_test
+import pytest
 
 
 class Test_Chapter4:
 
+    @pytest.mark.usefixtures('init_driver')
     def test_xml_button_functionality_in_click_handlers(self):
-        main_page = MainPage(init_test.setup_driver(self))
+        main_page = MainPage(self.driver)
         main_page.tap_chapter4(main_page.chapter4_field)
         main_page.tap_basic_click_handlers(main_page.basic_click_handlers_field)
         main_page.tap_xml_on_click_button(main_page.xml_on_click_button_field)
@@ -16,10 +17,10 @@ class Test_Chapter4:
 
         assert actual_text1 == Config.EXPECTED_XML_TEXT
         assert actual_text2 == Config.INPUT_TEXT
-        init_test.tear_down(self)
 
+    @pytest.mark.usefixtures('init_driver')
     def test_java_button_functionality_in_click_handlers(self):
-        main_page = MainPage(init_test.setup_driver(self))
+        main_page = MainPage(self.driver)
         main_page.tap_chapter4(main_page.chapter4_field)
         main_page.tap_basic_click_handlers(main_page.basic_click_handlers_field)
         main_page.tap_java_on_click_button(main_page.java_on_click_button_field)
@@ -29,4 +30,3 @@ class Test_Chapter4:
 
         assert actual_text1 == Config.EXPECTED_JAVA_TEXT
         assert actual_text2 == Config.INPUT_TEXT
-        init_test.tear_down(self)
