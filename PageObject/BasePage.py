@@ -1,8 +1,6 @@
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium import webdriver
-from Settings.Config import Config
+from selenium.webdriver.support import expected_conditions as ec
 
 
 class BasePage:
@@ -12,7 +10,7 @@ class BasePage:
         self.timeout = timeout
 
     def conditions(self, by_locator):
-        condition = EC.visibility_of_element_located(by_locator)
+        condition = ec.visibility_of_element_located(by_locator)
         element = WebDriverWait(self.driver, self.timeout).until(condition)
 
         return element

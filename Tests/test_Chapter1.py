@@ -18,7 +18,7 @@ class Test_Chapter1:
         main_page = MainPage(self.driver)
         is_displayed = main_page.is_displayed(main_page.chapter1_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
 
     @pytest.mark.usefixtures('init_driver')
     def test_basic_text_view_is_displayed(self):
@@ -26,7 +26,7 @@ class Test_Chapter1:
         main_page.tap_chapter1(main_page.chapter1_field)
         is_displayed = main_page.is_displayed(main_page.basic_text_view_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
 
     @pytest.mark.usefixtures('init_driver')
     def test_second_text_view_is_displayed(self):

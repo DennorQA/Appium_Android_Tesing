@@ -10,7 +10,7 @@ class Test_Chapter3:
         main_page = MainPage(self.driver)
         is_displayed = main_page.is_displayed(main_page.chapter3_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
 
     @pytest.mark.usefixtures('init_driver')
     def test_basic_view_is_displayed(self):
@@ -18,7 +18,7 @@ class Test_Chapter3:
         main_page.tap_chapter3(main_page.chapter3_field)
         is_displayed = main_page.is_displayed(main_page.basic_view_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
 
     @pytest.mark.usefixtures('init_driver')
     def test_basic_view_activity_title_is_displayed(self):
@@ -37,7 +37,7 @@ class Test_Chapter3:
         is_displayed = main_page.is_displayed(main_page.button_field)
         actual_text = main_page.get_element_text(main_page.button_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
         assert actual_text == "Button"
 
     @pytest.mark.usefixtures('init_driver')
@@ -46,7 +46,7 @@ class Test_Chapter3:
         main_page.tap_chapter3(main_page.chapter3_field)
         is_displayed = main_page.is_displayed(main_page.simple_list_view_field)
 
-        assert is_displayed == True
+        assert is_displayed is True
 
     @pytest.mark.usefixtures('init_driver')
     def test_list_of_elements_is_displayed(self):
