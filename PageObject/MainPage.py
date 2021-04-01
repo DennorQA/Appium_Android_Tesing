@@ -5,42 +5,24 @@ from Settings.Config import Config
 
 class MainPage(BasePage):
 
-    chapter1_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[1]")
-    chapter2_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[2]")
-    chapter3_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[3]")
-    chapter4_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[4]")
-    chapter5_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[5]")
-    chapter6_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[6]")
-    chapter7_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[7]")
-    chapter8_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[8]")
-    chapter9_field = (By.XPATH, Config.GENERAL_PATH
-                      + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[9]")
-    chapter10_field = (By.XPATH, Config.GENERAL_PATH
-                       + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[10]")
-    basic_text_view_field = (By.XPATH, Config.GENERAL_PATH
-                             + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[2]")
-    basic_view_field = (By.XPATH, Config.GENERAL_PATH
-                        + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[5]")
-    simple_list_view_field = (By.XPATH, Config.GENERAL_PATH
-                              + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[7]")
-    intent_with_results_field = (By.XPATH, Config.GENERAL_PATH
-                                 + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[8]")
-    implicit_intent_field = (By.XPATH, Config.GENERAL_PATH
-                             + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[7]")
-    basic_click_handlers_field = (By.XPATH, Config.GENERAL_PATH
-                                  + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[5]")
-    handling_list_view_clicks = (By.XPATH, Config.GENERAL_PATH
-                                 + "LinearLayout/android.widget.ExpandableListView/android.widget.TextView[6]")
-    xml_on_click_button_field = (By.XPATH, Config.GENERAL_PATH
-                                 + "LinearLayout/android.widget.Button[1]")
+    chapter1_field = (By.XPATH, Config.GENERAL_PATH + "TextView[1]")
+    chapter2_field = (By.XPATH, Config.GENERAL_PATH + "TextView[2]")
+    chapter3_field = (By.XPATH, Config.GENERAL_PATH + "TextView[3]")
+    chapter4_field = (By.XPATH, Config.GENERAL_PATH + "TextView[4]")
+    chapter5_field = (By.XPATH, Config.GENERAL_PATH + "TextView[5]")
+    chapter6_field = (By.XPATH, Config.GENERAL_PATH + "TextView[6]")
+    chapter7_field = (By.XPATH, Config.GENERAL_PATH + "TextView[7]")
+    chapter8_field = (By.XPATH, Config.GENERAL_PATH + "TextView[8]")
+    chapter9_field = (By.XPATH, Config.GENERAL_PATH + "TextView[9]")
+    chapter10_field = (By.XPATH, Config.GENERAL_PATH + "TextView[10]")
+    basic_text_view_field = (By.XPATH, Config.GENERAL_PATH + "TextView[2]")
+    basic_view_field = (By.XPATH, Config.GENERAL_PATH + "TextView[5]")
+    simple_list_view_field = (By.XPATH, Config.GENERAL_PATH + "TextView[7]")
+    intent_with_results_field = (By.XPATH, Config.GENERAL_PATH + "TextView[8]")
+    implicit_intent_field = (By.XPATH, Config.GENERAL_PATH + "TextView[7]")
+    basic_click_handlers_field = (By.XPATH, Config.GENERAL_PATH + "TextView[5]")
+    handling_list_view_clicks = (By.XPATH, Config.GENERAL_PATH + "TextView[6]")
+    xml_on_click_button_field = (By.XPATH, Config.GENERAL_PATH + "LinearLayout/android.widget.Button[1]")
     java_on_click_button_field = (By.ID, "codepath.apps.demointroandroid:id/btnClick2")
     xml_java_clicked_text_field = (By.ID, "android:id/message")
     xml_java_ok_button_field = (By.ID, "android:id/button1")

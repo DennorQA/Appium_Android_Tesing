@@ -2,7 +2,8 @@ class Config:
 
     # Init_Data
     GENERAL_PATH = \
-        "/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget."
+        "/hierarchy/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget." \
+        "LinearLayout/android.widget.ExpandableListView/android.widget."
     DESIRED_CAP = {
         "platformName": "Android",
         "platformVersion": "11.0",
